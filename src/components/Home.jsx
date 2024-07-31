@@ -17,9 +17,9 @@ const Home = () => {
       await signInWithEmailAndPassword(auth,email,password);
       const user = auth.currentUser;
       console.log(user);
-      console.log("User Successfully resistered! ");
+      console.log("User Successfully Loged In! ");
       
-      window.location.href="/dashboard";
+      window.location.href="/react-chat/dashboard";
       // toast.success("Successfully Loged In!", {
       //   position: "top-center",
       // });

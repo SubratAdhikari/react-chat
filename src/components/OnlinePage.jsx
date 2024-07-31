@@ -57,7 +57,7 @@ const OnlinePage = () => {
   }, []);
 
   function openchat(clientuid, clientusername){
-    navigate('/chatpage', { state: { clientuid, clientusername} }); 
+    navigate('/react-chat/chatpage', { state: { clientuid, clientusername} }); 
   }
 
 

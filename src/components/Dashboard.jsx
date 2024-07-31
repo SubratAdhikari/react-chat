@@ -34,7 +34,7 @@ const Dashboard = () => {
   async function handleLogout() {
     try {
       await auth.signOut();
-      window.location.href="/home";
+      window.location.href="/react-chat/home";
       console.log("User logged out successfully!");
     }catch (error) {
       console.error("Error loging out: ", error.message);

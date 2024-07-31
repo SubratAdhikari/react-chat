@@ -32,7 +32,7 @@ const Signup_page = () => {
       }
       console.log("User Successfully resistered! ");
       
-      window.location.href="/home";
+      window.location.href="/react-chat/home";
       // toast.success("Successfully resistered!", {
       //   position: "top-center",
       // });
