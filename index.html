@@ -8,18 +8,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="text/javascript">
-      (function() {
-        // Check if the URL contains the `p` query parameter
-        var params = new URLSearchParams(window.location.search);
-        var path = params.get('p');
-        if (path) {
-          // Replace the current URL with the correct route
-          window.history.replaceState({}, '', path);
-        }
-      })();
-    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-
