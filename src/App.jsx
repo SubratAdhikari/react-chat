@@ -21,14 +21,14 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/react-chat">
+      <BrowserRouter>
         <Routes>
           {/* <Route index element={<Home />} /> */}
-          <Route path='/' element={user ? <Navigate to='/dashboard' /> : <Home />} />
+          <Route path='/react-chat/' element={user ? <Navigate to='/react-chat/dashboard' /> : <Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/signup' element={<Signup_page />} />
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/react-chat/onlinepage' element={user ? <OnlinePage /> : <Home />} />
+          <Route path='/react-chat/dashboard' element={<Dashboard />} />
+          <Route path='/onlinepage' element={user ? <OnlinePage /> : <Home />} />
           <Route path='/chatpage' element={<Chatpage />} />
          
         </Routes>
