@@ -28,7 +28,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/signup' element={<Signup_page />} />
           <Route path='/react-chat/dashboard' element={<Dashboard />} />
-          <Route path='/onlinepage' element={user ? <OnlinePage /> : <Home />} />
+          <Route path='/react-chat/onlinepage' element={user ? <OnlinePage /> : <Home />} />
           <Route path='/chatpage' element={<Chatpage />} />
          
         </Routes>
