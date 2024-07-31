@@ -27,7 +27,7 @@ function App() {
     <Route path="/home" element={<Home />} />
     <Route path="/signup" element={<Signup_page />} />
     <Route path="/dashboard" element={<Dashboard />} />
-    <Route path="/onlinepage" element={user ? <OnlinePage /> : <Home />} />
+    <Route path="/onlinepage" element={<OnlinePage />} />
     <Route path="/chatpage" element={<Chatpage />} />
   </Routes>
 </BrowserRouter>
