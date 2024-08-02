@@ -21,26 +21,26 @@ const Dashboard = () => {
         console.log("User is not logged in");
       }
     });
-    
+
   };
 
 
   useEffect(()=>{
     fetchUserData();
     Online_timestamp();
-    
+
   },[]);
 
   async function handleLogout() {
     try {
       await auth.signOut();
-      window.location.href="/react-chat/home";
+      window.location.href="/home";
       console.log("User logged out successfully!");
     }catch (error) {
       console.error("Error loging out: ", error.message);
     }
   }
- 
+
 
   return (
     <div className='display'>

@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/react-chat">
+      <BrowserRouter>
   <Routes>
     <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Home />} />
     <Route path="/home" element={<Home />} />

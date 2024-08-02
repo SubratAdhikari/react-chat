@@ -6,7 +6,7 @@ import { getAuth } from "firebase/auth";
 const makeuseronline = async() =>{
     const auth = getAuth();
     const user = auth.currentUser;
-    
+
     if (user) {
     const userRef = doc(db, "Users", user.uid);
 
@@ -26,7 +26,7 @@ const makeuseronline = async() =>{
       console.error("Transaction failed: ", e);
     }
   }
-   
+
   }
 makeuseronline();
 const Online_timestamp = () => {

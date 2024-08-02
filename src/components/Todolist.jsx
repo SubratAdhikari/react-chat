@@ -134,7 +134,7 @@ const Todolist = () => {
         </ol>
 
         <button
-        onClick={() => window.location.href="/react-chat/onlinepage"}
+        onClick={() => window.location.href="/onlinepage"}
         >
             Online
         </button>

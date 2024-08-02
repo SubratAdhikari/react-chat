@@ -31,8 +31,8 @@ const Signup_page = () => {
         });
       }
       console.log("User Successfully resistered! ");
-      
-      window.location.href="/react-chat/home";
+
+      window.location.href="/home";
       // toast.success("Successfully resistered!", {
       //   position: "top-center",
       // });
@@ -46,7 +46,7 @@ const Signup_page = () => {
 
   return (
     <>
-    
+
     <div className='abox'>
       <div className='box'> 
             <div className='box2'>
