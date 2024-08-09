@@ -9,10 +9,14 @@ import { toast } from 'react-toastify';
 
 const Home = () => {
 
+  const [isLoading, setIsLoading] = useState(false);
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [error, setError] = useState(''); 
 
   const loginbtn = async() =>{
+    setIsLoading(true);
+    setError('');
     try{
       await signInWithEmailAndPassword(auth,email,password);
       const user = auth.currentUser;
@@ -20,23 +24,27 @@ const Home = () => {
       console.log("User Successfully resistered! ");
 
       window.location.href="/dashboard";
-      // toast.success("Successfully Loged In!", {
-      //   position: "top-center",
-      // });
+      
     } catch(error){
       console.log(error.message);
-      // toast.error(error.message, {
-      //   position: "top-center",
-      // });
+      setError(error.message);
+    }finally {
+      setIsLoading(false);
     }
   }
 
   return (
     <>
     <div className='abox'>
+      {isLoading ? (
+        <div className='loading'>
+        <h1 >Loading...</h1> 
+        </div>
+      ) : (
       <div className='box'> 
             <div className='box2'>
                 <img className='login_img' src={myImage} alt="Description of image" />
+                {error && <span className="error-message">{error}</span>}
                 <div className='userid_box'>
                 <PersonIcon className='person_icon' />
                 <input type='text' placeholder='E-mail' onChange={(e) => setemail(e.target.value)}></input>
@@ -52,6 +60,7 @@ const Home = () => {
             </div>  
 
       </div>
+      )}
     </div>
     </>
   )

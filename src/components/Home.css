@@ -12,6 +12,12 @@
     background-color: burlywood;
 }
 
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .box {
     background-color: cadetblue;
     height: auto;
